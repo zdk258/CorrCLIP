@@ -1,0 +1,14 @@
+background
+banana
+pineapple
+broccoli
+potato
+tomato
+chili pepper
+kiwi
+avocado
+orange
+lemon
+strawberry
+cherry tomato
+parsley
