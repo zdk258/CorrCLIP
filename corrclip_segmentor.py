@@ -65,6 +65,9 @@ class CorrCLIPSegmentation(BaseSegmentor):
             p.requires_grad = False
         self.dino = self.dino.half()
 
+        self.dino_qkv_output = None
+        self.dino.blocks[-1].attn.qkv.register_forward_hook(self._hook_fn_forward_qkv)
+
         self.dummy = nn.Linear(1, 1)
 
         self.unnorm = UnNormalize([0.48145466, 0.4578275, 0.40821073], [0.26862954, 0.26130258, 0.27577711])
@@ -82,6 +85,10 @@ class CorrCLIPSegmentation(BaseSegmentor):
 
         self.set_mask_generator(mask_generator)
 
+    def _hook_fn_forward_qkv(self, module, input, output):
+        """Hook函数，直接将输出赋值给实例变量"""
+        self.dino_qkv_output = output
+
     @torch.inference_mode()
     def forward_feature(self, img, masks):
         if type(img) == list:
@@ -91,13 +98,8 @@ class CorrCLIPSegmentation(BaseSegmentor):
         imgs_norm = torch.stack(imgs_norm, dim=0)
         imgs_norm = imgs_norm.half()
 
-        feat_out = {}
-        def hook_fn_forward_qkv(module, input, output):
-            feat_out["qkv"] = output
-        self.dino._modules["blocks"][-1]._modules["attn"]._modules["qkv"].register_forward_hook(
-            hook_fn_forward_qkv)
-
         # Forward pass in the model
+        self.dino_qkv_output = None
         feat = self.dino.get_intermediate_layers(imgs_norm, n=1)[-1]
 
         patch_size = self.dino.patch_embed.patch_size
@@ -105,7 +107,7 @@ class CorrCLIPSegmentation(BaseSegmentor):
         nb_im = feat.shape[0]  # Batch size
         nb_tokens = feat.shape[1]  # Number of tokens
 
-        qkv = feat_out["qkv"].reshape(nb_im, nb_tokens, 3, -1).permute(2, 0, 1, 3)
+        qkv = self.dino_qkv_output.reshape(nb_im, nb_tokens, 3, -1).permute(2, 0, 1, 3)
         dino_feats = qkv[0] + qkv[1]  #B, L, C
         dino_feats = dino_feats[:, 1:, ]
         dino_feats = F.normalize(dino_feats, dim=-1)
