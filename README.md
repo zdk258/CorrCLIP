@@ -1,13 +1,3 @@
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/corrclip-reconstructing-correlations-in-clip/unsupervised-semantic-segmentation-with-4)](https://paperswithcode.com/sota/unsupervised-semantic-segmentation-with-4?p=corrclip-reconstructing-correlations-in-clip)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/corrclip-reconstructing-correlations-in-clip/unsupervised-semantic-segmentation-with-3)](https://paperswithcode.com/sota/unsupervised-semantic-segmentation-with-3?p=corrclip-reconstructing-correlations-in-clip)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/corrclip-reconstructing-correlations-in-clip/unsupervised-semantic-segmentation-with-10)](https://paperswithcode.com/sota/unsupervised-semantic-segmentation-with-10?p=corrclip-reconstructing-correlations-in-clip)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/corrclip-reconstructing-correlations-in-clip/unsupervised-semantic-segmentation-with-9)](https://paperswithcode.com/sota/unsupervised-semantic-segmentation-with-9?p=corrclip-reconstructing-correlations-in-clip)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/corrclip-reconstructing-correlations-in-clip/unsupervised-semantic-segmentation-with-8)](https://paperswithcode.com/sota/unsupervised-semantic-segmentation-with-8?p=corrclip-reconstructing-correlations-in-clip)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/corrclip-reconstructing-correlations-in-clip/unsupervised-semantic-segmentation-with-12)](https://paperswithcode.com/sota/unsupervised-semantic-segmentation-with-12?p=corrclip-reconstructing-correlations-in-clip)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/corrclip-reconstructing-correlations-in-clip/unsupervised-semantic-segmentation-with-11)](https://paperswithcode.com/sota/unsupervised-semantic-segmentation-with-11?p=corrclip-reconstructing-correlations-in-clip)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/corrclip-reconstructing-correlations-in-clip/unsupervised-semantic-segmentation-with-7)](https://paperswithcode.com/sota/unsupervised-semantic-segmentation-with-7?p=corrclip-reconstructing-correlations-in-clip)
-
-
 <div align="center">
 
 # CorrCLIP: Reconstructing Patch Correlations in CLIP for Open-Vocabulary Semantic Segmentation
