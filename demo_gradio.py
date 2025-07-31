@@ -150,7 +150,7 @@ example_list = [
     ["images/Golden Retriever,Husky,background.jpg", "golden retriever,husky,background"],
     ["images/pikachu,eevee,background.jpg", "pikachu,eevee,background"],
     ["images/animals.png", "cheetah, zebra, rhinoceros, elephant, buffalo, giraffe, antelope, lion, leopard, background"],
-    ["images/fruit.jpg", "background, banana, pineapple, broccoli, potato, tomato, chili pepper, kiwi, avocado, orange, lemon, strawberry, cherry tomato, parsley"]
+    ["images/fruit.jpg", "background, banana, pineapple, broccoli, potato, tomato, chili pepper, kiwi, avocado, orange, lemon, strawberry, cherry tomato, parsley, lime"]
 ]
 
 
@@ -174,7 +174,7 @@ with gr.Blocks() as iface:
             # 修改点 1: 在定义时就将折叠组设置为不可见 (visible=False)
             # open=True 确保了它在变得可见时是展开状态
             with gr.Accordion("SAM2 Parameters", open=True, visible=False) as sam_params_group:
-                points_per_side_slider = gr.Slider(minimum=4, maximum=64, step=4, value=8, label="Points Per Side")
+                points_per_side_slider = gr.Slider(minimum=4, maximum=64, step=4, value=16, label="Points Per Side")
                 pred_iou_thresh_slider = gr.Slider(minimum=0.0, maximum=1.0, step=0.05, value=0.4, label="Prediction IoU Threshold")
                 stability_score_thresh_slider = gr.Slider(minimum=0.0, maximum=1.0, step=0.05, value=0.4, label="Stability Score Threshold")
                 multimask_output_checkbox = gr.Checkbox(value=False, label="Multimask Output")

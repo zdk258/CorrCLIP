@@ -86,7 +86,6 @@ class CorrCLIPSegmentation(BaseSegmentor):
         self.set_mask_generator(mask_generator)
 
     def _hook_fn_forward_qkv(self, module, input, output):
-        """Hook函数，直接将输出赋值给实例变量"""
         self.dino_qkv_output = output
 
     @torch.inference_mode()

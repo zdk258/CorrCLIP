@@ -2,13 +2,10 @@
 
 # CorrCLIP: Reconstructing Patch Correlations in CLIP for Open-Vocabulary Semantic Segmentation
 
-<div>
-    <a href='https://arxiv.org/abs/2411.10086' target='_blank'>
-        <img src='https://img.shields.io/badge/ArXiv-2411.10086-red?style=flat-square' alt='Paper ID'/>
-    </a>
-</div>
+[![Paper](https://img.shields.io/badge/ArXiv-2411.10086-red?style=flat-square)](https://arxiv.org/abs/2411.10086)
+[![Colab Demo](https://img.shields.io/static/v1?label=Demo&message=Google%20Colab&logo=google&color=orange)](https://colab.research.google.com/github/zdk258/CorrCLIP/blob/main/corrclip_demo.ipynb)
 
-**Accepted to ICCV 2025**
+**Accepted to ICCV 2025 Oral**
 
 </div>
 
