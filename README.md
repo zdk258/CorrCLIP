@@ -120,7 +120,7 @@ python eval_all.py
 
 ### 3. Results
 
-The performance of CorrCLIP can be enhanced as the Mask Generator improves. The following presents the results of different Mask Generators across eight benchmark datasets:
+The performance of CorrCLIP can be enhanced as the Mask Generator improves. The following presents the results using different Mask Generators across eight benchmark datasets:
 
 |  Mask Generator   |  VOC21   |  VOC20   |   PC59   |   PC60   |   City   |   ADE    |  Stuff   |  Object  |   Avg    |
 |:-----------------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
@@ -139,7 +139,8 @@ The performance of CorrCLIP can be enhanced as the Mask Generator improves. The 
 
 ## 🤖 Gradio Inference
 
-We provide a gradio demo to perform segmentation with custom images and category names.
+We provide a Gradio demo to perform segmentation on images with custom category names. You can run it on your own machine. 
+
 The demo offers two optional mask generators: SAM2 and EntitySeg. Using them requires their respective model weights and dependencies.
 
 ```
