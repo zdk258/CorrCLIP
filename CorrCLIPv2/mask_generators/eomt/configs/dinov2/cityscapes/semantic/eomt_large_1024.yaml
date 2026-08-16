@@ -1,0 +1,22 @@
+trainer:
+  max_epochs: 107
+  logger:
+    class_path: lightning.pytorch.loggers.wandb.WandbLogger
+    init_args:
+      resume: allow
+      project: "eomt"
+      name: "cityscapes_semantic_eomt_large_1024"
+model:
+  class_path: training.mask_classification_semantic.MaskClassificationSemantic
+  init_args:
+    attn_mask_annealing_enabled: True
+    attn_mask_annealing_start_steps: [3317, 6634, 9951, 13268]
+    attn_mask_annealing_end_steps: [6634, 9951, 13268, 16585]
+    network:
+      class_path: models.eomt.EoMT
+      init_args:
+        num_q: 100
+        encoder:
+          class_path: models.vit.ViT
+data:
+  class_path: datasets.cityscapes_semantic.CityscapesSemantic

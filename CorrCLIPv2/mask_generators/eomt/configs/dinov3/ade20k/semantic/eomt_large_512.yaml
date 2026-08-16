@@ -1,0 +1,29 @@
+trainer:
+  max_epochs: 16
+  logger:
+    class_path: lightning.pytorch.loggers.wandb.WandbLogger
+    init_args:
+      resume: allow
+      project: "eomt"
+      name: "ade20k_semantic_eomt_large_512_dinov3"
+model:
+  class_path: training.mask_classification_semantic.MaskClassificationSemantic
+  init_args:
+    attn_mask_annealing_enabled: True
+    attn_mask_annealing_start_steps: [0, 6520, 9780, 13040]
+    attn_mask_annealing_end_steps: [3000, 9780, 13040, 16300]
+    lr: 2e-4
+    lr_mult: 0.1
+    llrd: 1.0
+    warmup_steps: [2000, 3000]
+    delta_weights: True
+    network:
+      class_path: models.eomt.EoMT
+      init_args:
+        num_q: 100
+        encoder:
+          class_path: models.vit.ViT
+          init_args:
+            backbone_name: facebook/dinov3-vitl16-pretrain-lvd1689m
+data:
+  class_path: datasets.ade20k_semantic.ADE20KSemantic

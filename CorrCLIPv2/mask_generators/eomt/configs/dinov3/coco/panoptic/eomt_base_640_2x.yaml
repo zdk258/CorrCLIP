@@ -1,0 +1,31 @@
+trainer:
+  max_epochs: 24
+  logger:
+    class_path: lightning.pytorch.loggers.wandb.WandbLogger
+    init_args:
+      resume: allow
+      project: "eomt"
+      name: "coco_panoptic_eomt_base_640_dinov3"
+model:
+  class_path: training.mask_classification_panoptic.MaskClassificationPanoptic
+  init_args:
+    attn_mask_annealing_enabled: True
+    attn_mask_annealing_start_steps: [0, 73910, 118256]
+    attn_mask_annealing_end_steps: [3000, 103474, 147820]
+    lr: 2e-4
+    llrd_l2_enabled: False
+    warmup_steps: [2000, 3000]
+    delta_weights: True
+    network:
+      class_path: models.eomt.EoMT
+      init_args:
+        num_q: 200
+        num_blocks: 3
+        encoder:
+          class_path: models.vit.ViT
+          init_args:
+            backbone_name: facebook/dinov3-vitb16-pretrain-lvd1689m
+data:
+  class_path: datasets.coco_panoptic.COCOPanoptic
+  init_args:
+    stuff_classes: [80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132]

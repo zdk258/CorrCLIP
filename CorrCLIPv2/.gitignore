@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.env/
+
+# Editors and OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Scratch files
+*.tmp
+*.bak
+
+# Evaluation outputs
+*work_dirs/
+logs/
+log.txt
+show_dir/
+
+# Benchmark data and the pre-generated region masks that go with it
+/data/
+/instance_mask.zip
+
+# Memory banks: the .pt feature stores, FAISS indexes and intermediate build products,
+# whether downloaded from the Hugging Face dataset repo or built by memory_bank_builder/
+/memory_bank/
+
+# Model weights fetched at runtime (SAM/SAM2, EoMT, CropFormer, ...)
+*.pt
+*.pth
