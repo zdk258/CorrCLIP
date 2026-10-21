@@ -2,7 +2,7 @@
 
 # CorrCLIP: Reconstructing Patch Correlations in CLIP for Open-Vocabulary Semantic Segmentation
 
-[![Paper](https://img.shields.io/badge/ArXiv-2411.10086-red?style=flat-square)](https://arxiv.org/abs/2411.10086)
+[![CorrCLIP | ICCV.2025](https://img.shields.io/badge/CorrCLIP-ICCV.2025-007EC6?style=flat&labelColor=555555)](https://arxiv.org/abs/2411.10086)
 [![Colab Demo](https://img.shields.io/static/v1?label=Demo&message=Google%20Colab&logo=google&color=orange)](https://colab.research.google.com/github/zdk258/CorrCLIP/blob/master/CorrCLIPv1/corrclip_demo.ipynb)
 
 **Accepted to ICCV 2025 Oral**
@@ -109,10 +109,10 @@ python datasets/cvt_coco_object.py PATH_TO_COCO_STUFF164K -o PATH_TO_COCO164K
 
 ```
 # single-GPU:
-python eval.py --config config/cfg_DATASET.py 
+python eval.py --config configs/cfg_DATASET.py
 
 # multi-GPU:
-bash dist_test.sh config/cfg_DATASET.py NUM_GPU
+bash dist_test.sh configs/cfg_DATASET.py NUM_GPU
 
 # evaluation on all datasets:
 python eval_all.py
@@ -153,12 +153,14 @@ python demo_gradio.py
 
 ## ✍️ Citation
 
-```
-@article{zhang2024corrclip,
-  title={Corrclip: Reconstructing patch correlations in clip for open-vocabulary semantic segmentation},
-  author={Zhang, Dengke and Liu, Fagui and Tang, Quan},
-  journal={arXiv preprint arXiv:2411.10086},
-  year={2024}
+```bibtex
+@InProceedings{Zhang_2025_ICCV,
+    author    = {Zhang, Dengke and Liu, Fagui and Tang, Quan},
+    title     = {CorrCLIP: Reconstructing Patch Correlations in CLIP for Open-Vocabulary Semantic Segmentation},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2025},
+    pages     = {24677-24687}
 }
 ```
 

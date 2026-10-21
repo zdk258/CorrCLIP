@@ -2,7 +2,9 @@
 
 # CorrCLIPv2: Harnessing Unlabeled Images for Open-Vocabulary Semantic Segmentation
 
-**Journal extension of CorrCLIP (ICCV 2025 Oral)**
+[![CorrCLIPv2 | IJCV.2026](https://img.shields.io/badge/CorrCLIPv2-IJCV.2026-800080?style=flat&labelColor=555555)](https://link.springer.com/article/10.1007/s11263-026-03027-3)
+&nbsp;&nbsp;
+[![CorrCLIPv2 | arXiv.2610](https://img.shields.io/badge/CorrCLIPv2-arXiv.2610-BB4444?style=flat&labelColor=555555)](https://arxiv.org/abs/2610.24757)
 
 </div>
 
@@ -29,6 +31,8 @@ At inference, the test image's regions are pooled into VFM queries; each query r
 Decoupled Multi-CLIP Ensemble (DMCE) stores region features from multiple CLIP variants under the same VFM index, so auxiliary CLIP representations (DFN by default) are retrieved instead of recomputed at inference — ensemble gains at ~3 ms retrieval overhead.
 
 ## 📦 Dependencies
+
+After cloning the repository, run all commands from the `CorrCLIPv2/` directory unless otherwise specified.
 
 ```
 # git clone this repository
@@ -186,8 +190,21 @@ mIoU on the ten standard benchmarks. All rows use RADIOv3-L and EntitySeg; -B/-L
 | CorrCLIPv2-L | COCO  | 82.3  | 93.2  | 51.1 | 56.8 |  58.0  | 39.1  | 36.5 | 59.2 |  14.9  | 18.6  | 51.0 |
 | CorrCLIPv2-L | MONET | 82.7  | 93.4  | 50.3 | 55.9 |  56.2  | 38.6  | 34.9 | 59.2 |  15.0  | 18.8  | 50.5 |
 
+## ✍️ Citation
+
+```bibtex
+@article{zhang2026corrclipv2,
+  title={CorrCLIPv2: Harnessing Unlabeled Images for Open-Vocabulary Semantic Segmentation},
+  author={Zhang, Dengke and Liu, Fagui and Tang, Quan and Chen, CL Philip},
+  journal={International Journal of Computer Vision},
+  volume={134},
+  number={11},
+  pages={478},
+  year={2026},
+  publisher={Springer}
+}
+```
+
 ## 🙏 Acknowledgement
 
-Our implementation is based
-on [ClearCLIP](https://github.com/mc-lan/ClearCLIP), [ProxyCLIP](https://github.com/mc-lan/ProxyCLIP), [DINO](https://github.com/facebookresearch/dino), [SAM2](https://github.com/facebookresearch/sam2), [Mask2Former](https://github.com/facebookresearch/Mask2Former), [EoMT](https://github.com/tue-mps/EoMT),
-and [EntitySeg](https://github.com/qqlu/Entity/blob/main/Entityv2/README.md). Thanks for their awesome work!
+We thank the authors of [DINOv3](https://github.com/facebookresearch/dinov3), [RADIO](https://github.com/NVlabs/RADIO), [SAM](https://github.com/facebookresearch/segment-anything), and [EntitySeg](https://github.com/qqlu/Entity/blob/main/Entityv2/README.md) for their excellent work and open-source contributions.
