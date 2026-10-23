@@ -1,0 +1,4 @@
+others
+steel with fair corrosion
+steel with poor corrosion
+steel with severe corrosion

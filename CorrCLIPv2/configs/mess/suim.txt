@@ -1,0 +1,8 @@
+background (waterbody)
+human diver
+aquatic plants and sea-grass
+wrecks and ruins
+robots (auvs/rovs/instruments)
+reefs and invertebrates
+fish and vertebrates
+sea-floor and rocks

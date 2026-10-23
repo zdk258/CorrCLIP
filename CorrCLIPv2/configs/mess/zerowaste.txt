@@ -1,0 +1,5 @@
+background
+rigid plastic
+cardboard
+metal
+soft plastic

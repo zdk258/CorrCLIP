@@ -1,0 +1,56 @@
+bicycle
+boat
+breakwater
+bridge
+building
+bus
+canal
+car
+cliff
+culvert
+cypress tree
+dam
+ditch
+fence
+fire hydrant
+fjord
+flood
+glaciers
+hot spring
+lake
+levee
+lighthouse
+mangrove
+marsh
+motorcycle
+offshore platform
+parking meter
+person
+pier
+pipeline
+pole
+puddle
+rapids
+reservoir
+river
+river delta
+road
+sea
+ship
+shoreline
+sidewalk
+sky
+snow
+spillway
+swimming pool
+terrain
+traffic sign
+train
+truck
+umbrella
+vegetation
+wall
+water tower
+water well
+waterfall
+wetland

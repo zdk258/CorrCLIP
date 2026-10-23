@@ -194,14 +194,15 @@ mIoU on the ten standard benchmarks. All rows use RADIOv3-L and EntitySeg; -B/-L
 
 ```bibtex
 @article{zhang2026corrclipv2,
-  title={CorrCLIPv2: Harnessing Unlabeled Images for Open-Vocabulary Semantic Segmentation},
-  author={Zhang, Dengke and Liu, Fagui and Tang, Quan and Chen, CL Philip},
-  journal={International Journal of Computer Vision},
-  volume={134},
-  number={11},
-  pages={478},
-  year={2026},
-  publisher={Springer}
+    author    = {Zhang, Dengke and Liu, Fagui and Tang, Quan and Chen, C. L. Philip},
+    title     = {{CorrCLIPv2}: Harnessing Unlabeled Images for Open-Vocabulary Semantic Segmentation},
+    journal   = {International Journal of Computer Vision},
+    year      = {2026},
+    volume    = {134},
+    number    = {11},
+    pages     = {478},
+    publisher = {Springer},
+    doi       = {10.1007/s11263-026-03027-3}
 }
 ```
 

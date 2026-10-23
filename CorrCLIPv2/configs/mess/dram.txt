@@ -1,0 +1,12 @@
+bird
+boat
+bottle
+cat
+chair
+cow
+dog
+horse
+person; man; woman; people
+potted-plant
+sheep
+background; house; sky; wall; tree; wood; grass; road; sea; river; mountain; sands; desk; bed; building; cloud; lamp; door; window; wardrobe; ceiling; shelf; curtain; stair; floor; hill; rail; fence

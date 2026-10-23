@@ -154,13 +154,13 @@ python demo_gradio.py
 ## ✍️ Citation
 
 ```bibtex
-@InProceedings{Zhang_2025_ICCV,
+@inproceedings{Zhang_2025_ICCV,
     author    = {Zhang, Dengke and Liu, Fagui and Tang, Quan},
-    title     = {CorrCLIP: Reconstructing Patch Correlations in CLIP for Open-Vocabulary Semantic Segmentation},
+    title     = {{CorrCLIP}: Reconstructing Patch Correlations in {CLIP} for Open-Vocabulary Semantic Segmentation},
     booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-    month     = {October},
     year      = {2025},
-    pages     = {24677-24687}
+    month     = {October},
+    pages     = {24677--24687}
 }
 ```
 
